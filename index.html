@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NDA SSB Interview Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="top">
+      <h1>NDA SSB Personal Interview Quiz</h1>
+      <p class="sub">Practice the thinking behind the answers, not the words.</p>
+    </header>
+
+    <!-- Start screen -->
+    <section id="start" class="card">
+      <h2>Choose what to practise</h2>
+      <div id="setButtons" class="set-buttons"></div>
+      <p class="note">Questions and options are shuffled every time.</p>
+    </section>
+
+    <!-- Quiz screen -->
+    <section id="quiz" class="card hidden" aria-live="polite">
+      <div class="meta">
+        <span id="progressText">Question 1 of 10</span>
+        <span id="scoreText">Score: 0</span>
+      </div>
+      <div class="bar"><div id="barFill"></div></div>
+      <p id="setLabel" class="set-label"></p>
+      <h2 id="question" class="question"></h2>
+      <div id="options" class="options"></div>
+
+      <button id="hintBtn" class="btn ghost" type="button">Show Hint 💡</button>
+      <p id="hint" class="hint hidden"></p>
+
+      <div id="feedback" class="feedback hidden" role="status"></div>
+      <div class="actions">
+        <button id="nextBtn" class="btn primary hidden" type="button">Next Question ➜</button>
+      </div>
+    </section>
+
+    <!-- Results screen -->
+    <section id="result" class="card hidden">
+      <h2>Final Results</h2>
+      <p id="percent" class="percent"></p>
+      <p id="remark" class="remark"></p>
+      <dl class="stats">
+        <div><dt>Total Questions</dt><dd id="rTotal"></dd></div>
+        <div><dt>Correct Answers</dt><dd id="rCorrect"></dd></div>
+        <div><dt>Wrong Answers</dt><dd id="rWrong"></dd></div>
+        <div><dt>Final Score</dt><dd id="rScore"></dd></div>
+      </dl>
+      <button id="restartBtn" class="btn primary" type="button">Restart Quiz</button>
+    </section>
+  </main>
+  <script src="more-questions.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
